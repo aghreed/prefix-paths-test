@@ -4,7 +4,10 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+console.log("PREFIX_PATHS: ", process.env.PREFIX_PATHS)
+
 module.exports = {
+  pathPrefix: "/test",
   siteMetadata: {
     siteUrl: "https://gatsbycontentfulhomepage.gatsbyjs.io/",
     title: "Gatsby Contentful Homepage Starter",
