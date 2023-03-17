@@ -1,0 +1,13 @@
+diff --git a/node_modules/gatsby-cli/lib/create-cli.js b/node_modules/gatsby-cli/lib/create-cli.js
+index 1566e82..5c73ed1 100644
+--- a/node_modules/gatsby-cli/lib/create-cli.js
++++ b/node_modules/gatsby-cli/lib/create-cli.js
+@@ -215,7 +215,7 @@ function buildLocalCommands(cli, isLocalSite) {
+       describe: `Build site without uglifying JS bundles (for debugging).`
+     }).option(`profile`, {
+       type: `boolean`,
+-      default: false,
++      default: process.env.REACT_PROFILE === `true` || process.env.REACT_PROFILE === `1`,
+       describe: `Build site with react profiling (this can add some additional overhead). See https://reactjs.org/docs/profiler`
+     }).option(`graphql-tracing`, {
+       type: `boolean`,

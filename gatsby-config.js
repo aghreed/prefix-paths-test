@@ -5,6 +5,7 @@ require("dotenv").config({
 })
 
 console.log("PREFIX_PATHS: ", process.env.PREFIX_PATHS)
+console.log("REACT_PROFILE", process.env.REACT_PROFILE)
 
 module.exports = {
   pathPrefix: "/test",
